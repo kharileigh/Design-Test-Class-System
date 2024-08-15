@@ -1,4 +1,7 @@
-import pytest
+# TO SKIP A TESTS
+# import pytest
+#   @pytest.mark.skip
+
 from lib.task_list import TaskList
 from lib.task import Task
 
@@ -11,6 +14,7 @@ Add multiple tasks
 NONE MARKED AS COMPLETE
 all_incomplete only lists the incomplete tasks - order they were added 
 """
+
 def test_add_multiple_tasks_all_incomplete():
     task_list = TaskList()
 
@@ -23,7 +27,6 @@ def test_add_multiple_tasks_all_incomplete():
     task_list.add(task_3)
 
     assert task_list.all_incomplete() == [task_1, task_2, task_3]
-
 
 
 
