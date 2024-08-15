@@ -1,16 +1,21 @@
 class Diary:
-    # no initialiser
+    
+    
+    def __init__(self):
 
+        #  creates empty list to hold diary entries in Diary
+        self._entries = []
+
+
+    
     def add(self, diary_entry):
-        # Parameters:
-        #   diary_entry -- instance of DiaryEntry()
-        # Returns:
-        #   nothing
-        # Side-effects
-        #  adds to list of diary entries
-        pass 
+
+        #  adds current diary entry to list in Diary
+        self._entries.append(diary_entry)
+
+
 
     def all(self):
-        #Returns :
-        #   list of DiaryENtry instances
-        pass
+        
+        #  list of diary entries in Diary
+        return self._entries

@@ -49,7 +49,10 @@ Verbs : methods & functionality
 ```python
 
 class Diary:
-    # no initialiser
+    def __init__(self):
+        # Side-effects
+        #   creates empty list to hold diary entries
+        pass
 
     def add(self, diary_entry):
         # Parameters:

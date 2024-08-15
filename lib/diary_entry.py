@@ -1,13 +1,20 @@
 class DiaryEntry:
     
-    # PUBLIC PROPERTIES -- expose them
-    #   title -- str - entry title
-    #   contents -- str - entry contents
-
+    # PUBLIC PROPERTIES 
     def __init__(self, title, contents):
-        # Parameters:
-        #   title -- str - entry title
-        #   contents -- str - entry contents
-        # Side effects:
+    
         #   sets properties -- title, contents
-        pass
+        self.title = title
+        self.contents = contents
+
+
+
+"""
+PUBLIC PROPERTIES CAN BE WRITTEN LIKE THIS ALSO :
+from dataclasses import dataclass
+
+@dataclass
+class DiaryEntry():
+    title : str
+    contents : str
+"""
