@@ -144,7 +144,7 @@ class PhoneNumberExtractor:
         pass  
 
 
-class ReadableEntryFinder:
+class ReadableEntryExtractor:
   
 
     def __init__(self, diary):
