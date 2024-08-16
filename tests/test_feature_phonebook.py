@@ -18,15 +18,18 @@ def test_extract_phone_numbers():
     # initialise & add entry to Child(DiaryEntry)
     entry_1 = DiaryEntry("Title 1", "My friend is 07800000001 and 07800000002")
     entry_2 = DiaryEntry("Title 2", "Contents 2")
-    # entry_3 = DiaryEntry("Title 3", "My friend is 07800000003")
+    entry_3 = DiaryEntry("Title 3", "My friend is 07800000003")
+    
 
     # update Parent(Diary)
     diary.add(entry_1)
     diary.add(entry_2)
-    # diary.add(entry_3)
+    diary.add(entry_3)
+    
 
     # initialise & add diary to Child(PhoneNumberExtractor)
     extractor = PhoneNumberExtractor(diary)
+    print(extractor)
     assert extractor.extract() == ["07800000001", "07800000002"]
 
     # not registering third entry...
@@ -39,17 +42,18 @@ def test_extract_phone_numbers():
 # CALL EXTRACT FUNCTION -- PhoneNumberExtractor
 # IGNORES DUPLICATES PHONE NUMBER 
 # """
-# diary = Diary()
+# def test_extract_phone_numbers_ignore_duplicates():
+#     diary = Diary()
 
-# # all numbers the same, saved once
-# entry_1 = DiaryEntry("Title 1", "My friend is 07800000001 and 07800000001")
-# entry_2 = DiaryEntry("Title 2", "My friend is 07800000002")
+#     # all numbers the same, saved once
+#     entry_1 = DiaryEntry("Title 1", "My friend is 07800000001 and 07800000001")
+#     entry_2 = DiaryEntry("Title 2", "My friend is 07800000002")
 
-# diary.add(entry_1)
-# diary.add(entry_2)
+#     diary.add(entry_1)
+#     diary.add(entry_2)
 
-# extractor = PhoneNumberExtractor(diary)
-# extractor.extract() -> ["07800000000"]
+#     extractor = PhoneNumberExtractor(diary)
+#     assert extractor.extract() == ["07800000001"]
 
 
 
